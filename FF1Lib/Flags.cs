@@ -26,6 +26,7 @@ namespace FF1Lib
 		private const int BUG_FIXES = 15;
 		private const int ENEMY_BUG_FIXES = 16;
 		private const int SCALE = 17;
+		private const int PROGRESSIVE_SCALE = 24;
 
 		[FlagString(Character = ITEMS, FlagBit = 1)]
 		public bool Shops { get; set; }
@@ -221,6 +222,9 @@ namespace FF1Lib
 		public double EncounterRate { get; set; }
 		[FlagString(Character = 23, Multiplier = 1)]
 		public int ForcedPartyMembers { get; set; }
+
+		[FlagString(Character = PROGRESSIVE_SCALE, FlagBit = 7)]
+		public ProgressiveScaleMode ProgressiveScaleMode { get; set; }
 
 		public bool ModernBattlefield { get; set; }
 		public bool FunEnemyNames { get; set; }
