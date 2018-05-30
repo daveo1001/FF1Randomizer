@@ -240,9 +240,14 @@
 					</div>
 					<div class="slider-cell"></div>
 					<div class="slider-cell">
-						<div class="col-xs-9"><label>Encounter Rate:</label></div>
-						<div class="col-xs-9"><label id="encounter-rate-display">{{(EncounterRate/16.00).toFixed(2)}}x</label></div>
-						<div class="col-xs-3"><input v-model="EncounterRate" type="range" asp-for="Flags.EncounterRate" min="0" max="63" step="1" /></div>
+						<div class="col-xs-9"><label>Overworld Encounter Rate:</label></div>
+						<div class="col-xs-9"><label id="encounter-rate-display">{{(EncounterRate/30.00).toFixed(2)}}x</label></div>
+						<div class="col-xs-3"><input v-model="EncounterRate" type="range" asp-for="Flags.EncounterRate" min="0" max="45" step="1" /></div>
+					</div>
+					<div class="slider-cell">
+						<div class="col-xs-9"><label>Dungeon Encounter Rate:</label></div>
+						<div class="col-xs-9"><label id="encounter-rate-display">{{(DungeonEncounterRate/30.00).toFixed(2)}}x</label></div>
+						<div class="col-xs-3"><input v-model="DungeonEncounterRate" type="range" asp-for="Flags.DungeonEncounterRate" min="0" max="45" step="1" /></div>
 					</div>
 					<div class="slider-cell"></div>
 					<div class="slider-cell">
